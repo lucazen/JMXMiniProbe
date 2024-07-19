@@ -61,14 +61,8 @@ jssecacerts
 #-------------------------------------------------------
 scripts/
 #-------------------------------------------------------
-target/Assembletest/
-target/classes/
-target/generated-resources/
-target/generated-sources/
-target/JMXProbe/
-target/maven-archiver/
+target/
 probe_installer.py
 PRTG_SSL_Negotiation.txt
 JMXMBeans.xml
-target/JMXMiniProbe.jar
 JMXMBeans.xml
