@@ -5,182 +5,248 @@ Unit Values[BANDWIDTH, MEMORY, DISK, FILE, TIME_RESPONSE, TIME_SECONDS, TIME_HOU
 Please note, the apache.commons.digester3 is * VERY * case sensitive
 ########################################################### -->
 <profiles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Profile.xsd">
-	<profile>
-		<name>JVM GC Stats MarkSweep</name>
-		<tag>jmxsensor,mjjmxsensor</tag>
-		<kind>mjjmxgcmssensor</kind>
-		<description>Garbage Collection statistics</description>
-		<baseclass>com.paessler.prtg.jmx.sensors.JMXSensor</baseclass>
-		<help>JVM Mark and Sweep Garbage Collection metrics</help>
-		<entries>
-			<entry>
-				<object>java.lang:type=GarbageCollector,name=PS MarkSweep</object>
-				<displayvalue>MS GarbageCollector Stats</displayvalue>
-				<description>Mark and Sweap Garbage Collector</description>
-				<shortdescription>GC-MS</shortdescription>
-				<comment>Class Name:sun.management.GarbageCollectorImpl</comment>
-				<attributes>
-					<attribute>
-						<object>CollectionCount</object>
-						<displayvalue/>
-						<description>CollectionCount</description>
-						<shortdescription/>
-						<comment>type=long,unit=COUNT; Value=0</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-					<attribute>
-						<object>CollectionTime</object>
-						<displayvalue/>
-						<description>CollectionTime</description>
-						<shortdescription/>
-						<comment>type=long,unit=COUNT; Value=0</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-					<attribute>
-						<object>LastGcInfo</object>
-						<displayvalue/>
-						<description>LastGcInfo</description>
-						<shortdescription/>
-						<comment>type=javax.management.openmbean.CompositeData,unit=COUNT</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-					<attribute>
-						<object>MemoryPoolNames</object>
-						<displayvalue/>
-						<description>MemoryPoolNames</description>
-						<shortdescription/>
-						<comment>type=[Ljava.lang.String;,unit=COUNT; Value=[Ljava.lang.String;@7c18d288</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-					<attribute>
-						<object>Name</object>
-						<displayvalue/>
-						<description>Name</description>
-						<shortdescription/>
-						<comment>type=java.lang.String,unit=COUNT; Value=PS MarkSweep</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-					<attribute>
-						<object>ObjectName</object>
-						<displayvalue/>
-						<description>ObjectName</description>
-						<shortdescription/>
-						<comment>type=javax.management.ObjectName,unit=COUNT; Value=java.lang:type=GarbageCollector,name=PS MarkSweep</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-					<attribute>
-						<object>Valid</object>
-						<displayvalue/>
-						<description>Valid</description>
-						<shortdescription/>
-						<comment>type=boolean,unit=COUNT; Value=true</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-				</attributes>
-			</entry>
-		</entries>
-	</profile>
-	<profile>
-		<name>JVM GC Stats PS Scavenge</name>
-		<tag>jmxsensor,mjjmxsensor</tag>
-		<kind>mjjmxgcpssensor</kind>
-		<description>PS Scavenge Garbage Collection statistics</description>
-		<baseclass>com.paessler.prtg.jmx.sensors.JMXSensor</baseclass>
-		<help>JVM PS Scavenge Garbage Collection metrics</help>
-		<entries>
-			<entry>
-				<object>java.lang:type=GarbageCollector,name=PS Scavenge</object>
-				<displayvalue>PS GarbageCollector Stats</displayvalue>
-				<description>PS Scavenge Garbage Collector</description>
-				<shortdescription>GC-PS</shortdescription>
-				<comment>Class Name:sun.management.GarbageCollectorImpl</comment>
-				<attributes>
-					<attribute>
-						<object>CollectionCount</object>
-						<displayvalue/>
-						<description>CollectionCount</description>
-						<shortdescription/>
-						<comment>type=long,unit=COUNT; Value=0</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-					<attribute>
-						<object>CollectionTime</object>
-						<displayvalue/>
-						<description>CollectionTime</description>
-						<shortdescription/>
-						<comment>type=long,unit=COUNT; Value=0</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-					<attribute>
-						<object>LastGcInfo</object>
-						<displayvalue/>
-						<description>LastGcInfo</description>
-						<shortdescription/>
-						<comment>type=javax.management.openmbean.CompositeData,unit=COUNT</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-					<attribute>
-						<object>MemoryPoolNames</object>
-						<displayvalue/>
-						<description>MemoryPoolNames</description>
-						<shortdescription/>
-						<comment>type=[Ljava.lang.String;,unit=COUNT; Value=[Ljava.lang.String;@417cc8df</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-					<attribute>
-						<object>Name</object>
-						<displayvalue/>
-						<description>Name</description>
-						<shortdescription/>
-						<comment>type=java.lang.String,unit=COUNT; Value=PS Scavenge</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-					<attribute>
-						<object>ObjectName</object>
-						<displayvalue/>
-						<description>ObjectName</description>
-						<shortdescription/>
-						<comment>type=javax.management.ObjectName,unit=COUNT; Value=java.lang:type=GarbageCollector,name=PS Scavenge</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-					<attribute>
-						<object>Valid</object>
-						<displayvalue/>
-						<description>Valid</description>
-						<shortdescription/>
-						<comment>type=boolean,unit=COUNT; Value=true</comment>
-						<unit/>
-						<customunit/>
-						<enabled>true</enabled>
-					</attribute>
-				</attributes>
-			</entry>
-		</entries>
-	</profile>
+    <profile>
+        <name>JVM GC Stats MarkSweep</name>
+        <tag>jmxsensor,mjjmxsensor</tag>
+        <kind>mjjmxgcmssensor</kind>
+        <description>Garbage Collection statistics</description>
+        <baseclass>com.paessler.prtg.jmx.sensors.JMXSensor</baseclass>
+        <help>JVM Mark and Sweep Garbage Collection metrics</help>
+        <entries>
+            <entry>
+                <object>java.lang:type=GarbageCollector,name=ConcurrentMarkSweep</object>
+                <displayvalue>MS GarbageCollector Stats</displayvalue>
+                <description>Mark and Sweap Garbage Collector</description>
+                <shortdescription>GC-MS</shortdescription>
+                <comment>Class Name:sun.management.GarbageCollectorImpl</comment>
+                <attributes>
+                    <!-- This is the number of garbage collection events fired since the JVM was launched.-->
+                    <attribute>
+                        <object>CollectionCount</object>
+                        <displayvalue/>
+                        <description>CollectionCount</description>
+                        <shortdescription/>
+                        <comment>type=long,unit=COUNT; Value=0</comment>
+                        <unit>COUNT</unit>
+                        <customunit/>
+                        <enabled>true</enabled>
+                    </attribute>
+                    <!--CollectionTime is the total time spent doing garbage collection in milliseconds and is another good candidate to profile your Java application behaviour.-->
+                    <attribute>
+                        <object>CollectionTime</object>
+                        <displayvalue/>
+                        <description>CollectionTime</description>
+                        <shortdescription/>
+                        <comment>type=long,unit=TIME_RESPONSE; Value=0</comment>
+                        <unit>TIME_RESPONSE</unit>
+                        <customunit/>
+                        <enabled>true</enabled>
+                    </attribute>
+                    <!-- Number of threads that performed the GC -->
+                    <attribute>
+                        <object>LastGcInfo.GcThreadCount</object>
+                        <displayvalue/>
+                        <description>LastGcInfo.GcThreadCount</description>
+                        <shortdescription/>
+                        <comment>type=javax.management.openmbean.CompositeData,unit=COUNT</comment>
+                        <unit>COUNT</unit>
+                        <customunit/>
+                        <enabled>true</enabled>
+                    </attribute>
+                    <!-- Total duration of the GC event -->
+                    <attribute>
+                        <object>LastGcInfo.duration</object>
+                        <displayvalue/>
+                        <description>LastGcInfo.duration</description>
+                        <shortdescription/>
+                        <comment>type=javax.management.openmbean.CompositeData,unit=TIME_RESPONSE</comment>
+                        <unit>TIME_RESPONSE</unit>
+                        <customunit/>
+                        <enabled>true</enabled>
+                    </attribute>
+                </attributes>
+            </entry>
+        </entries>
+    </profile>
+    <profile>
+        <name>JVM GC Stats G1GC</name>
+        <tag>jmxsensor,mjjmxsensor</tag>
+        <kind>mjjmxgcg1sensor</kind>
+        <description>G1 Garbage Collection statistics</description>
+        <baseclass>com.paessler.prtg.jmx.sensors.JMXSensor</baseclass>
+        <help>JVM G1 Garbage Collection metrics</help>
+        <entries>
+            <entry>
+                <object>java.lang:type=GarbageCollector,name=G1 Young Generation</object>
+                <displayvalue>G1 Garbage Collector Stats</displayvalue>
+                <description>G1 Garbage Collector</description>
+                <shortdescription>GC-G1GC</shortdescription>
+                <comment>Class Name:sun.management.GarbageCollectorImpl</comment>
+                <attributes>
+                    <attribute>
+                        <object>CollectionCount</object>
+                        <displayvalue/>
+                        <description>CollectionCount</description>
+                        <shortdescription/>
+                        <comment>type=long,unit=COUNT; Value=0</comment>
+                        <unit>COUNT</unit>
+                        <customunit/>
+                        <enabled>true</enabled>
+                    </attribute>
+                    <attribute>
+                        <object>CollectionTime</object>
+                        <displayvalue/>
+                        <description>CollectionTime</description>
+                        <shortdescription/>
+                        <comment>type=long,unit=TIME_RESPONSE; Value=0</comment>
+                        <unit>TIME_RESPONSE</unit>
+                        <customunit/>
+                        <enabled>true</enabled>
+                    </attribute>
+                    <attribute>
+                        <object>LastGcInfo.GcThreadCount</object>
+                        <displayvalue/>
+                        <description>LastGcInfo.GcThreadCount</description>
+                        <shortdescription/>
+                        <comment>type=javax.management.openmbean.CompositeData,unit=COUNT</comment>
+                        <unit>COUNT</unit>
+                        <customunit/>
+                        <enabled>true</enabled>
+                    </attribute>
+                    <attribute>
+                        <object>LastGcInfo.duration</object>
+                        <displayvalue/>
+                        <description>LastGcInfo.duration</description>
+                        <shortdescription/>
+                        <comment>type=javax.management.openmbean.CompositeData,unit=TIME_RESPONSE</comment>
+                        <unit>TIME_RESPONSE</unit>
+                        <customunit/>
+                        <enabled>true</enabled>
+                    </attribute>
+                </attributes>
+            </entry>
+        </entries>
+    </profile>
+    <profile>
+        <name>JVM GC Stats ParNew</name>
+        <tag>jmxsensor,mjjmxsensor</tag>
+        <kind>mjjmxgcpnsensor</kind>
+        <description>ParNew Garbage Collection statistics</description>
+        <baseclass>com.paessler.prtg.jmx.sensors.JMXSensor</baseclass>
+        <help>JVM ParNew Garbage Collection metrics</help>
+        <entries>
+            <entry>
+                <object>java.lang:type=GarbageCollector,name=ParNew</object>
+                <displayvalue>ParNew Garbage Collector Stats</displayvalue>
+                <description>ParNew Garbage Collector</description>
+                <shortdescription>GC-ParNew</shortdescription>
+                <comment>Class Name:sun.management.GarbageCollectorImpl</comment>
+                <attributes>
+                    <attribute>
+                        <object>CollectionCount</object>
+                        <displayvalue/>
+                        <description>CollectionCount</description>
+                        <shortdescription/>
+                        <comment>type=long,unit=COUNT; Value=0</comment>
+                        <unit>COUNT</unit>
+                        <customunit/>
+                        <enabled>true</enabled>
+                    </attribute>
+                    <attribute>
+                        <object>CollectionTime</object>
+                        <displayvalue/>
+                        <description>CollectionTime</description>
+                        <shortdescription/>
+                        <comment>type=long,unit=TIME_RESPONSE; Value=0</comment>
+                        <unit>TIME_RESPONSE</unit>
+                        <customunit/>
+                        <enabled>true</enabled>
+                    </attribute>
+                    <attribute>
+                        <object>LastGcInfo.GcThreadCount</object>
+                        <displayvalue/>
+                        <description>LastGcInfo.GcThreadCount</description>
+                        <shortdescription/>
+                        <comment>type=javax.management.openmbean.CompositeData,unit=COUNT</comment>
+                        <unit>COUNT</unit>
+                        <customunit/>
+                        <enabled>true</enabled>
+                    </attribute>
+                    <attribute>
+                        <object>LastGcInfo.duration</object>
+                        <displayvalue/>
+                        <description>LastGcInfo.duration</description>
+                        <shortdescription/>
+                        <comment>type=javax.management.openmbean.CompositeData,unit=TIME_RESPONSE</comment>
+                        <unit>TIME_RESPONSE</unit>
+                        <customunit/>
+                        <enabled>true</enabled>
+                    </attribute>
+                    <!--                    <attribute>-->
+                    <!--                        <object>LastGcInfo.startTime</object>-->
+                    <!--                        <displayvalue/>-->
+                    <!--                        <description>LastGcInfo.startTime</description>-->
+                    <!--                        <shortdescription/>-->
+                    <!--                        <comment>type=javax.management.openmbean.CompositeData,unit=COUNT</comment>-->
+                    <!--                        <unit>COUNT</unit>-->
+                    <!--                        <customunit/>-->
+                    <!--                        <enabled>true</enabled>-->
+                    <!--                    </attribute>-->
+                    <!--                    <attribute>-->
+                    <!--                        <object>LastGcInfo.endTime</object>-->
+                    <!--                        <displayvalue/>-->
+                    <!--                        <description>LastGcInfo.endTime</description>-->
+                    <!--                        <shortdescription/>-->
+                    <!--                        <comment>type=javax.management.openmbean.CompositeData,unit=COUNT</comment>-->
+                    <!--                        <unit>COUNT</unit>-->
+                    <!--                        <customunit/>-->
+                    <!--                        <enabled>true</enabled>-->
+                    <!--                    </attribute>-->
+
+                    <!--                    <attribute>-->
+                    <!--                        <object>MemoryPoolNames</object>-->
+                    <!--                        <displayvalue/>-->
+                    <!--                        <description>MemoryPoolNames</description>-->
+                    <!--                        <shortdescription/>-->
+                    <!--                        <comment>type=[Ljava.lang.String;,unit=COUNT; Value=[Ljava.lang.String;@417cc8df</comment>-->
+                    <!--                        <unit>COUNT</unit>-->
+                    <!--                        <customunit/>-->
+                    <!--                        <enabled>true</enabled>-->
+                    <!--                    </attribute>-->
+                    <!--                    <attribute>-->
+                    <!--                        <object>Name</object>-->
+                    <!--                        <displayvalue/>-->
+                    <!--                        <description>Name</description>-->
+                    <!--                        <shortdescription/>-->
+                    <!--                        <comment>type=java.lang.String,unit=COUNT; Value=PS Scavenge</comment>-->
+                    <!--                        <unit>COUNT</unit>-->
+                    <!--                        <customunit/>-->
+                    <!--                        <enabled>true</enabled>-->
+                    <!--                    </attribute>-->
+                    <!--                    <attribute>-->
+                    <!--                        <object>ObjectName</object>-->
+                    <!--                        <displayvalue/>-->
+                    <!--                        <description>ObjectName</description>-->
+                    <!--                        <shortdescription/>-->
+                    <!--                        <comment>type=javax.management.ObjectName,unit=COUNT;-->
+                    <!--                            Value=java.lang:type=GarbageCollector,name=G1-->
+                    <!--                        </comment>-->
+                    <!--                        <unit>COUNT</unit>-->
+                    <!--                        <customunit/>-->
+                    <!--                        <enabled>true</enabled>-->
+                    <!--                    </attribute>-->
+                    <!--                    <attribute>-->
+                    <!--                        <object>Valid</object>-->
+                    <!--                        <displayvalue/>-->
+                    <!--                        <description>Valid</description>-->
+                    <!--                        <shortdescription/>-->
+                    <!--                        <comment>type=boolean,unit=COUNT; Value=true</comment>-->
+                    <!--                        <unit>COUNT</unit>-->
+                    <!--                        <customunit/>-->
+                    <!--                        <enabled>true</enabled>-->
+                    <!--                    </attribute>-->
+                </attributes>
+            </entry>
+        </entries>
+    </profile>
 </profiles>
